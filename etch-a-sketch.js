@@ -22,19 +22,23 @@ boxes.forEach((item) => {
 });
 
 resetButon.addEventListener('click', (e) => { //reset the grid and reload event listeners for the newly created divs
-    let gridSize = prompt("Enter the new grid's side length");
-    boxes.forEach((item) => {
-        container.removeChild(item);
-    })
-    createGrid(gridSize)
-    boxes = document.querySelectorAll('.box');
-    boxes.forEach((item) => {
-        item.addEventListener('mouseenter', (e) => color(e));
-        
-        let boxWidth = 100 / gridSize;
-        item.style.width = boxWidth + 'vw';
-        item.style.height = boxWidth + 'vw';
-    });
+    let gridSize = parseInt(prompt("Enter the new grid's side length"));
+    if (isNaN(gridSize) || gridSize > 100) {
+        alert("Enter a number less than 100!")
+    } else {
+        boxes.forEach((item) => {
+            container.removeChild(item);
+        })
+        createGrid(gridSize)
+        boxes = document.querySelectorAll('.box');
+        boxes.forEach((item) => {
+            item.addEventListener('mouseenter', (e) => color(e));
+            
+            let boxWidth = 675 / gridSize;
+            item.style.width = boxWidth + 'px';
+            item.style.height = boxWidth + 'px';
+        });
+    }
 });
 
 
