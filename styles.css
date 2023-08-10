@@ -1,0 +1,41 @@
+/* BODY SYLES */
+body {
+    margin: 0
+}
+
+/* HEADER STYLES */
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: cadetblue;
+}
+
+.headerInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    margin: 0 16px;
+}
+
+p {
+    margin: 0 16px 8px;
+}
+
+button {
+    margin: 16px 16px 0 0;
+    font-size: 16px;
+}
+
+/* GRID CONTAINER STYLES */
+.gridContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box {
+    outline: solid 1px;
+    width: 6.25vw;
+    height: 50px;
+}
