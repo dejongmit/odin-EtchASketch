@@ -36,6 +36,6 @@ button {
 
 .box {
     outline: solid 1px;
-    width: 6.25vw;
-    height: 50px;
+    width: 6.25vw; /*Starting with for the 16x16 grid*/
+    height: 6.25vw;
 }
